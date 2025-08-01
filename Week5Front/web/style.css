@@ -1,10 +1,27 @@
 /* CSS Document */
 
+
+
+/*responsive*/
+
+
+
+
+
+
+
+/*-------------------*/
+
+
+body {
+    background-color: #012459;
+}
+
 a 	  { text-decoration: none }
 
 a:hover { text-decoration: underline;
-          color: red;
-          background-color: #CCFFCC }
+          color: rgb(245, 242, 242);
+          background-color: #2b577a }
 
 li em   { color: red; 
           font-weight: bold }
