@@ -5,28 +5,70 @@
 /*responsive*/
 
 
-
-
-
-
-
 /*-------------------*/
-
 
 body {
     background-color: #012459;
+    margin: 0;
+
 }
 
-a 	  { text-decoration: none }
 
-a:hover { text-decoration: underline;
-          color: rgb(245, 242, 242);
-          background-color: #2b577a }
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    margin-top: -5px;
+    background-color: #111;
+    overflow: auto;
+    color: #818181;
+    /* ซ่อนแถบเลื่อน */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
 
-li em   { color: red; 
-          font-weight: bold }
+.sidenav a {
+    padding: 16px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+}
 
-ul	  { margin-left: 2cm }
+.sidenav a:hover {
+    color: #f1f1f1;
+}
 
-ul ul	  { text-decoration: underline; 
-          margin-left: .5cm }
+
+.content {
+    color: white;
+    padding: 1px 16px;
+}
+
+.frame {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 210px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+a {
+    color: white;
+    font-size: 20px;
+}
+
+.code-block {
+  position: absolutrel;
+  background-color: rgb(118, 124, 182);
+  border: 1px solid rgba(255, 255, 255, 0.904);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  margin: 10px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 15px;
+ 
+}

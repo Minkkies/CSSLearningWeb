@@ -13,10 +13,47 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 </head>
 
 <body>
-    <header>
+    <div class="sidenav">
+        <a href="#Home">
+            <h3>Home</h3>
+        </a>
+
+        <a href="#Intro">
+            <h3>Introduction</h3>
+        </a>
+
+        <a href="">
+            <h3>Selectors & Style</h3>
+        </a>
+        <a href="">
+            <h3>Text & Font</h3>
+        </a>
+        <a href="">
+            <h3>Background & Box</h3>
+        </a>
+        <a href="">
+            <h3> Borders & Layout</h3>
+        </a>
+
+        <hr style="width: 100px;">
+
+        <a href="https://github.com/Minkkies/HtmlTutorial1/blob/master/Note/Basic%20Html.md" target="_blank">
+            <h3>
+                Read More: HTML
+            </h3>
+        </a>
+        <a href="https://github.com/Minkkies/CSSTutorial/blob/master/CSSnote.md" target="_blank">
+            <h3>
+                Read More: CSS
+            </h3>
+        </a>
+
+    </div>
+
+    <div class="content frame">
         <dl>
             <dt>
-                <h1>What I Have Learn About CSS</h1>
+                <h1 id="Home">What I Have Learn About CSS</h1>
             </dt>
 
             <div>
@@ -26,17 +63,71 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 <dd>
                     <p>- CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
                 </dd>
+                <dd>
+                    <p>- For meaning of Element you can read more in HTML and CSS link in sidebar</p>
+                </dd>
             </div>
-            
         </dl>
-    </header>
+    </div>
 
-    <!--<div>
-        <a href="inlineCSS.html">inlineCSS</a>
-        <a href="EmbededCSSDemo.html">EmbededCSSDemo</a>
-        <a href="externalCSSDemo.html">ExternalCSSDemo</a>
-    </div>-->
 
+    <div class="content frame">
+        <h1 id="Intro">Introduction to CSS</h1>
+        <h2>- Inline CSS (การใช้ CSS ภายในแท็ก HTML โดยตรงใน body )</h2>
+        <div class="content">
+            <a href="inlineCSS.html" target="_blank">Result Inline</a>
+            <div class="code-block">
+                <pre><code>
+&lt;body&gt;
+    &lt;p&gt;Here is some text&lt;/p&gt;
+    &lt;p style="font-size: 20pt"&gt;Here is some more text&lt;/p&gt;
+    &lt;p style="font-size: 20pt;color: #0000FF"&gt;Even more text&lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+            </div>
+
+            <h2>- External CSS (การใช้ไฟล์ CSS ภายนอก ใน head ) </h2>
+            <a href="externalCSSDemo.html" target="_blank">Result External</a>
+            <div class="code-block">
+            <pre><code>
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Style Sheets&lt;/title&gt;
+    &lt;style type="text/css"&gt;
+        em {
+            background-color:#8000FF;
+            color:white;
+        }
+        h1 {
+            font-family:Arial, sans-serif;
+        }
+        p {
+            font-size:18pt;
+        }
+        .blue {
+            color:blue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1 class="blue"&gt;A Heading&lt;/h1&gt;
+    &lt;p&gt;Here is some text. Here is some text. Here
+        is some text. Here is some text. Here is some
+        text.&lt;/p&gt;
+    &lt;h1&gt;Another Heading&lt;/h1&gt;
+    &lt;p class="blue"&gt;Here is some more text.
+        Here is some more text.&lt;/p&gt;
+    &lt;p class="blue"&gt;Here is some &lt;em&gt;more&lt;/em&gt;
+        text. Here is some more text.&lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+        </div>
+
+            <a href="EmbededCSSDemo.html" target="_blank">EmbededCSSDemo</a>
+        </div>
+    </div>
 </body>
 
 </html>
