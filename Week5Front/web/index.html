@@ -4,15 +4,619 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
 -->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+
+<head>
+    <title>CSSLearingWeb</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="main">
+    <div id="mySidebar" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+        <a href="#Home">
+            <h3>Home</h3>
+        </a>
+
+        <a href="#Intro">
+            <h3>Introduction</h3>
+        </a>
+
+        <a href="#Selector">
+            <h3>Selectors & Style</h3>
+        </a>
+        <a href="#Text">
+            <h3>Text & Font</h3>
+        </a>
+        <a href="#Back">
+            <h3>Background & Box</h3>
+        </a>
+        <a href="#Border">
+            <h3> Borders & Layout</h3>
+        </a>
+
+        <hr style="width: 200px;">
+
+        <a href="https://github.com/Minkkies/HtmlTutorial1/blob/master/Note/Basic%20Html.md" target="_blank">
+            <h3>
+                Read More: HTML
+            </h3>
+        </a>
+        <a href="https://github.com/Minkkies/CSSTutorial/blob/master/CSSnote.md" target="_blank">
+            <h3>
+                Read More: CSS
+            </h3>
+        </a>
+
+        <h3 style="margin-left: 30px;">My favourite Song:</h3>
+        <div class="song">
+            <iframe src="https://www.youtube.com/embed/YQ-qToZUybM?si=6ioZhEtlkcQfY_1W" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+        </div>
+    </div>
+
+    <div class="content ">
+        <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+    </div>
+    <!------------------JAVASCRIPT------------------------>
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "320px";
+            document.getElementById("main").style.marginLeft = "320px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+
+    <!----------------HOME------------------------------>
+
+    <div class="content frame">
+
+        <dl>
+            <dt>
+                <h1 id="Home">What I Have Learn About CSS</h1>
+            </dt>
+
+            <div>
+                <dd>
+                    <p>- CSS stands for Cascading Style Sheets</p>
+                </dd>
+                <dd>
+                    <p>- CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
+                </dd>
+                <dd>
+                    <p>- For meaning of Element you can read more in HTML and CSS link in sidebar</p>
+                </dd>
+            </div>
+        </dl>
+    </div>
+
+    <!--------------------Introduction----------------------->
+    <div class="content frame">
+        <h1 id="Intro">Introduction to CSS</h1>
+        <h2>- Inline CSS (การใช้ CSS ภายในแท็ก HTML โดยตรงใน body )</h2>
+        <div class="content">
+            <a href="inlineCSS.html" target="_blank">Result Inline1</a><br>
+            <a href="/Week5Front/web/SelectorAndStyle/inline.html" target="_blank">Result Inline2</a>
+            <div class="code-block">
+                <pre><code>
+&lt;body&gt;
+    &lt;p&gt;Here is some text&lt;/p&gt;
+    <mark>&lt;p style="font-size: 20pt"&gt;</mark>Here is more text&lt;/p&gt;
+    <mark>&lt;p style="font-size: 20pt;color: #0000FF"&gt;</mark>
+    Even more text&lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+            </div>
+
+            <h2>- HTML Structure using List</h2>
+            <a href="externalCSSDemo.html" target="_blank">Result List</a>
+            <div class="code-block">
+                <pre><code>
+&lt;body&gt;
+    &lt;h1&gt;Shopping list for &lt;em&gt;Monday&lt;/em&gt;:&lt;/h1&gt;
+    <mark>&lt;ul&gt;</mark>
+        <mark>&lt;li&gt;Milk&lt;/li&gt;</mark>
+        <mark>&lt;li&gt;Bread</mark>
+            <mark>&lt;ul&gt;</mark>
+                <mark>&lt;li&gt;White bread&lt;/li&gt;</mark>
+                <mark>&lt;li&gt;Rye bread&lt;/li&gt;</mark>
+                <mark>&lt;li&gt;Whole wheat bread&lt;/li&gt;</mark>
+            <mark>&lt;/ul&gt;</mark>
+       <mark>&lt;/li&gt;</mark> 
+        <mark>&lt;li&gt;Rice&lt;/li&gt;</mark>
+       <mark> &lt;li&gt;Potatoes&lt;/li&gt;</mark>
+        <mark>&lt;li&gt;Pizza &lt;em&gt;with mushrooms&lt;/em&gt;&lt;/li&gt;</mark>
+    <mark>&lt;/ul&gt;</mark>
+    &lt;a href="http://food.com" title="grocery store"&gt;
+    Go to the Grocery store&lt;/a&gt;
+&lt;/body&gt;
+</code></pre>
+
+            </div>
+
+            <h2>- Internal CSS (การใช้CSS ภายในแท็ก style ใน head)</h2>
+            <a href="/Week5Front/web/SelectorAndStyle/internal.html" target="_blank">Result Internal</a>
+            <div class="code-block">
+                <pre><code>
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;CSS Internal&lt;/title&gt;
+  <mark>&lt;style&gt;</mark>
+    <mark>body { font-size: 18px }</mark>
+    <mark>p { font-style: italic }</mark>
+    <mark>span {</mark>
+      <mark>background-color: #ddd;</mark> 
+      <mark>font-weight: bold;</mark>
+    <mark>}</mark>
+  <mark>&lt;/style&gt;</mark>
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;span&gt;การแยกหน้าที่ระหว่าง HTML และ CSS คือ&lt;/span&gt;
+  &lt;p&gt;HTML ใช้สำหรับการจัดโครงร่างของเว็บเพจ&lt;/p&gt;
+  &lt;span&gt;CSS ใช้สำหรับการจัดรูปแบบของเว็บเพจ&lt;/span&gt;
+&lt;/body&gt;
+</code></pre>
+
+
+            </div>
+
+            <h2>- External CSS (การใช้ไฟล์ CSS ภายนอก ใน head ) </h2>
+            <h2>- &ltembed&gt คือ แท็ก HTML ที่ใช้สำหรับ ฝัง (embed) เนื้อหาหรือไฟล์มัลติมีเดียภายนอก
+                เช่น: ไฟล์วิดีโอ , ไฟล์เสียง , PDF
+            </h2>
+            <a href="EmbededCSSDemo.html" target="_blank">Result Embedded</a>
+            <div class="code-block">
+                <pre><code>
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name=".." content="..."&gt;
+    &lt;title&gt;Style Sheets&lt;/title&gt;
+    <mark>&lt;style type="text/css"&gt;//External</mark>
+
+        <mark>em { //Embeded</mark>
+           <mark> background-color:#8000FF;</mark>
+            <mark>color:white;</mark>
+        <mark>}</mark>
+
+        h1 { 
+            font-family:Arial, sans-serif;
+        }
+        p {
+            font-size:18pt;
+        }
+        .blue {
+            color:blue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1 class="blue"&gt;A Heading&lt;/h1&gt;
+    &lt;p&gt;Here is some text. Here is some text. Here
+        is some text. Here is some text. Here is 
+        some text.&lt;/p&gt;      
+    &lt;h1&gt;Another Heading&lt;/h1&gt;        
+    &lt;p class="blue"&gt;Here is some more text.
+        Here is some more text.&lt;/p&gt;
+    &lt;p class="blue"&gt;Here is some &lt;em&gt;more&lt;/em&gt;
+        text. Here is some more text.&lt;/p&gt;  
+&lt;/body&gt;
+</code></pre>
+            </div>
+        </div>
+        <h2>- Div & P & <Span></Span> Element :<br>
+            &ltdiv&gt จะขึ้นบรรทัดใหม่ นิยมใช้เป็นเหมือนกล่องไว้ครอบเพื่อแต่ง &ltstyle&gt <br>
+            &ltspan&gt จะไม่ขึ้นบรรทัดใหม่ ส่วนตัวเอาไว้ใช้คู่กับ &ltp&gt การณีอยากแต่งแค่บางส่วนของประโยค
+        </h2>
+        <a href="/Week5Front/web/SelectorAndStyle/div-paragraph.html" target="_blank">Result Div , P, Span</a>
+        <div class="code-block">
+            <pre><code>
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;CSS Adjacent Selector&lt;/title&gt;
+    &lt;style&gt;
+        <mark>div + p { font-size: 30px; }</mark>
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    <mark>&lt;div&gt;div&lt;/div&gt;</mark>
+    <mark>&lt;p&gt;first p&lt;/p&gt;</mark>
+    <mark>&lt;p&gt;second p&lt;/p&gt;</mark>
+&lt;/body&gt;
+</code></pre>
+        </div>
+
+    </div>
+    <!--------------------Selector----------------------->
+    <div class="content frame">
+        <h1 id="Selector">Selector & Style Precedence</h1>
+        <h2>- Child:<br>
+            #div1 > p คือ Child Selector หมายถึงจะเลือก p ที่เป็น ลูกโดยตรง ของ #div1 เท่านั้น<br>
+            ดังนั้น:<br>
+            ✅ first p จะถูกปรับขนาดตัวอักษรเป็น 30px<br>
+            ❌ second p ไม่โดนเพราะอยู่ใน #div2 ซึ่งเป็นลูกของ #div1 แต่ p นั้นไม่ใช่ลูกโดยตรง
+        </h2>
+        <a href="/Week5Front/web/SelectorAndStyle/selector-child.html" target="_blank">Result Child</a>
+        <div class="code-block">
+            <pre><code>
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;CSS Child Selector&lt;/title&gt;
+    &lt;style&gt;
+        <mark>#div1 &gt; p { font-size: 30px; }</mark>
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    <mark>&lt;div id="div1"&gt;</mark>
+       <mark>&lt;p&gt;first p inside #div1&lt;/p&gt;</mark>
+        <mark>&lt;div id="div2"&gt;</mark>
+            <mark>&lt;p&gt;second p inside #div2&lt;/p&gt;</mark>
+        <mark>&lt;/div&gt;</mark>
+    <mark>&lt;/div&gt;</mark>
+&lt;/body&gt;
+</code></pre>
+
+        </div>
+
+        <h2>- Class ใช้กำหนดคลาสของแต่ละส่วนเช่นในตัวอย่าง <br>
+            .bold → ตัวหนา<br>
+            .italic → ตัวเอียง<br>
+            .underline → ขีดเส้นใต้<br>
+            .mark → พื้นหลังสีเทา
+        </h2>
+        <a href="/Week5Front/web/SelectorAndStyle/selector-class.html" target="_blank">Result Class</a>
+        <div class="code-block">
+            <pre><code>
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;CSS Class Selector&lt;/title&gt;
+  &lt;style&gt;
+    <mark>.bold{ font-weight: bold; }</mark>
+    <mark>.italic { font-style: italic; }</mark>
+    <mark>.underline { text-decoration: underline; }</mark>
+    <mark>.mark { background-color: lightgray; }</mark>
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  <mark>&lt;p class="bold"&gt;คติสอนใจ&lt;/p&gt;
+    &lt;div class="italic"&gt;อย่านอนตื่นสาย&lt;/div&gt;&lt;br&gt;
+    &lt;div class="underline"&gt;อย่าอายทำกิน&lt;/div&gt;&lt;br&gt;
+    &lt;div class="mark"&gt;อย่าคอยวาสนา&lt;/div&gt;</mark>
+&lt;/body&gt;
+</code></pre>
+
+        </div>
+
+        <h2>- first-last child</h2>
+        <a href="/Week5Front/web/SelectorAndStyle/selector-first-last-child.html" target="_blank">Result first & last
+            child</a>
+        <div class="code-block">
+            <pre><code>
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;CSS First-Last Child Selector&lt;/title&gt;
+  &lt;style&gt;
+    <mark>div &gt; :first-child {
+      background-color: lightgray;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    div &gt; :last-child {
+      background-color: black;
+      color: white;
+      font-style: italic;
+    }</mark>    
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;p&gt;This is first child&lt;/p&gt;
+    &lt;p&gt;This is second child&lt;/p&gt;
+    &lt;p&gt;This is third child&lt;/p&gt;
+    &lt;span&gt;This is fourth child&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+        </div>
+
+        <h2>- hover , active</h2>
+        <a href="/Week5Front/web/SelectorAndStyle/selector-hover-active.html" target="_blank">Result Hover , Active</a>
+        <div class="code-block">
+            <pre><code>
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;CSS Hover &amp; Active Selector&lt;/title&gt;
+  &lt;style&gt;
+    div {
+      background-color: lightgray;
+      color: black;
+    }
+    <mark> div:hover {
+      background-color: black;
+      color: white;
+    }
+    div:active {
+      background-color: red;
+      font-weight: bold;
+    }</mark>
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;br&gt;&amp;nbsp;&amp;nbsp;Hello, please hover mouse on me&lt;br&gt;&amp;nbsp;
+  &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+        </div>
+
+        <h2>- Id </h2>
+        <a href="/Week5Front/web/SelectorAndStyle/selector-id.html" target="_blank">Result Id Element</a>
+        <div class="code-block">
+            <pre><code>
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;CSS ID Selector&lt;/title&gt;
+  &lt;style&gt;
+    <mark>#p1 {
+      color: red;
+      background-color: lightgray;
+    }   
+    #p2 { 
+      color: blue; 
+      font-style: italic;
+      text-decoration: underline;
+    }</mark> 
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;p&gt;ข้อความที่ไม่กำหนด id&lt;/p&gt;
+  <mark>&lt;p id="p1"&gt;ข้อความที่กำหนดค่า id="p1"&lt;/p&gt;</mark>
+  <mark>&lt;p id="p2"&gt;ข้อความที่กำหนดค่า id="p2"&lt;/p&gt;</mark>
+&lt;/body&gt;
+</code></pre>
+
+        </div>
+
+        <h2>- nth child</h2>
+        <a href="/Week5Front/web/SelectorAndStyle/selector-nth-child.html" target="_blank">Result nth Child</a>
+        <div class="code-block">
+            <pre><code>
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;CSS Nth Child Selector&lt;/title&gt;
+  &lt;style&gt;
+    <mark>div &gt; :nth-child(1) {
+      background-color: lightgray;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    div &gt; :nth-child(even) {
+      background-color: black;
+      color: white;
+      font-style: italic;
+    }
+    div &gt; :nth-child(3n) {
+      text-decoration: underline;
+    }</mark>
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div&gt;
+    <mark>&lt;p&gt;This is nth-child(1)&lt;/p&gt;
+    &lt;p&gt;This is nth-child(2)&lt;/p&gt;
+    &lt;p&gt;This is nth-child(3)&lt;/p&gt;
+    &lt;span&gt;This is nth-child(4)&lt;/span&gt;</mark>
+  &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+        </div>
+
+        <h2>- Tag</h2>
+        <a href="/Week5Front/web/SelectorAndStyle/selector-tag-class.html" target="_blank">Result Tag1</a>
+        <br><a href="/Week5Front/web/SelectorAndStyle/selector-tag.html" target="_blank">Result Tag2</a>
+        <div class="code-block">
+            <pre><code>
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;CSS Tag.Class Selector&lt;/title&gt;
+  &lt;style&gt;
+    <mark>p.bold {
+      font-weight: bold;
+    }
+    .underline {
+      text-decoration: underline;
+    }</mark>
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;p class="bold"&gt;HTML (Hypertext Markup Language)&lt;/p&gt;
+  &lt;p class="bold underline"&gt;CSS (Cascading Style Sheets)&lt;/p&gt;
+  &lt;div class="bold"&gt;PHP (PHP: Hypertext Preprocessor)&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+        </div>
+
+        <h2>- Union</h2>
+        <a href="/Week5Front/web/SelectorAndStyle/selector-union.html" target="_blank">Result Union</a>
+        <div class="code-block">
+            <pre><code>
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;CSS Union Selector&lt;/title&gt;
+  &lt;style&gt;
+    p, div, span {
+      font-size: 18px;
+    }
+    div.bold, #first-line {
+      font-weight: bold;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;p id="first-line"&gt;This is a first line&lt;/p&gt;
+  &lt;div&gt;This is a div&lt;/div&gt;
+  &lt;span&gt;This is a span&lt;/span&gt;
+  &lt;div class="bold"&gt;This is a div with bold class&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+        </div>
+
+    </div>
+
+    <!--------------------Text Font---------------------->
+    <div class="content frame">
+        <h1 id="Text">Text & Font Styling</h1>
+        <h2>- font-family size</h2>
+         <a href="/Week5Front/web/font-text/font-family-size.html" target="_blank">Result font family</a>
+        
+        <h2>- font style</h2>
+        <a href="/Week5Front/web/font-text/font-style.html" target="_blank">Result font style</a>
+
+        <h2>- text align</h2>
+        <a href="/Week5Front/web/font-text/text-align.html" target="_blank">Result text align</a>
     
-    <body>
-        <a href="inlineCSS.html">inlineCSS</a>
-        <a href="EmbededCSSDemo.html">EmbededCSSDemo</a>
-        <a href="externalCSSDemo.html">ExternalCSSDemo</a>
-    </body>
+        <h2>- text decoration</h2>
+        <a href="/Week5Front/web/font-text/text-decoration.html" target="_blank">Result text decoration</a>
+        
+
+        <h2>- text transform</h2>
+        <a href="/Week5Front/web/font-text/text-transform.html" target="_blank">Result text transform</a>
+       
+
+        <h2>- font embedded</h2>
+        <a href="/Week5Front/web/font-text/font-embedded.html" target="_blank">Result font embedded</a>
+       
+
+        <h2>- list style</h2>
+        <a href="/Week5Front/web/font-text/list-style.html" target="_blank">Result list style</a>
+        
+
+        <h2>- Unit</h2>
+        <a href="/Week5Front/web/font-text/unit.html" target="_blank">Result Unit</a>
+       
+
+    </div>
+
+    <!--------------------Back---------------------->
+    <div class="content frame">
+        <h1 id="Back">Background & Box Model</h1>
+        <h2>- Background</h2>
+        <a href="\Week5Front\web\background-basic\background.html" target="_blank">Result Background</a>
+        
+
+        <h2>- Box model</h2>
+        <a href="\Week5Front\web\background-basic\box_model.html" target="_blank">Result Box model</a>
+       
+
+        <h2>- child element</h2>
+        <a href="\Week5Front\web\background-basic\child_element.html" target="_blank">Result child element</a>
+        
+
+        <h2>- comment</h2>
+        <a href="\Week5Front\web\background-basic\Comment.html" target="_blank">Result comment</a>
+        <br><a href="Week5Front/web/background-basic/Commentscop.html" target="_blank">Result comment2</a>
+
+        <h2>- padding</h2>
+        <a href="\Week5Front\web\background-basic\padding.html" target="_blank">Result padding</a><br>
+        <a href="\Week5Front\web\background-basic\paddingrule.html" target="_blank">Result padding2</a><br>
+        <a href="\Week5Front\web\border-decloration\padding.html" target="_blank">Result padding3</a>
+
+        <h2>- CSS Link</h2>
+        <a href="\Week5Front\web\background-basic\Csslink.html" target="_blank">Result CSS Link</a>
+        
+
+        <h2>- Float</h2>
+        <a href="\Week5Front\web\background-basic\Float.html" target="_blank">Result Float</a><br>
+        <a href="\Week5Front\web\background-basic\Float2.html" target="_blank">Result Float2</a><br>
+        <a href="\Week5Front\web\background-basic\FloatLeft.html" target="_blank">Result FloatLeft3</a><br>
+        <a href="\Week5Front\web\background-basic\FloatNote.html" target="_blank">Result FloatNote4</a><br>
+        <a href="\Week5Front\web\border-decloration\float.html" target="_blank">Result Float4</a>
+
+        <h2>- Header Footer</h2>
+        <a href="\Week5Front\web\background-basic\header_footer.html" target="_blank">Result Header Footer</a><br>
+        <a href="\Week5Front\web\background-basic\header_footer1.html" target="_blank">Result Header Footer2</a>
+
+    </div>
+    <!--------------------Border---------------------->
+    <div class="content frame">
+        <h1 id="Border"> Borders, Layout, and Positioning</h1>
+        <h2>- Border</h2>
+        <a href="\Week5Front\web\border-decloration\border.html" target="_blank">Result Border</a>
+        
+
+        <h2>- Border color</h2>
+        <a href="\Week5Front\web\border-decloration\border-color.html" target="_blank">Result Border color</a>
+        
+
+        <h2>- Border radius</h2>
+        <a href="\Week5Front\web\border-decloration\border-radius.html" target="_blank">Result Border radius</a>
+        
+
+        <h2>- Border style</h2>
+        <a href="\Week5Front\web\border-decloration\border-style.html" target="_blank">Result Border style</a>
+        
+
+        <h2>- Border width</h2>
+        <a href="\Week5Front\web\border-decloration\border-width.html" target="_blank">Result Border width</a>
+        
+
+        <h2>- Display</h2>
+        <a href="\Week5Front\web\border-decloration\display.html" target="_blank">Result Display</a>
+        
+
+        <h2>- Margin</h2>
+        <a href="\Week5Front\web\border-decloration\margin.html" target="_blank">Result Margin</a>
+        
+
+        <h2>- Overflow</h2>
+        <a href="\Week5Front\web\border-decloration\overflow.html" target="_blank">Result Overflow</a>
+       
+        <h2>- Position</h2>
+        <a href="\Week5Front\web\border-decloration\position.html" target="_blank">Result Position</a><br>
+        <a href="\Week5Front\web\border-decloration\position-absolute.html" target="_blank">Result Position absolute</a><br>
+        <a href="\Week5Front\web\border-decloration\position-fixed.html" target="_blank">Result Position fixed</a><br>
+        <a href="\Week5Front\web\border-decloration\position-relative.html" target="_blank">Result Position relative</a>
+
+        <h2>- visibility</h2>
+        <a href="\Week5Front\web\border-decloration\visibility.html" target="_blank">Result visibility</a>
+
+        <h2>- Width , Height</h2>
+        <a href="\Week5Front\web\border-decloration\width-height.html" target="_blank">Result Width , Height</a><br>
+        <a href="\Week5Front\web\border-decloration\width-height-2.html" target="_blank">Result Width , Height2</a>
+
+        <h2>- Z index</h2>
+        <a href="\Week5Front\web\border-decloration\z-index.html" target="_blank">Result Z index</a>
+    </div>
+
+    <!--------------------Footer---------------------->
+    <footer><br>
+        <i><b>Copyright &copy;2025 designed by Ornpreeya Arsanathong</b></i>
+    </footer>
+</body>
+
 </html>
