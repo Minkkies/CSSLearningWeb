@@ -108,6 +108,13 @@ a {
     font-size: 20px;
 }
 
+
+a:hover {
+   
+    color: rgb(250, 42, 42);
+    
+}
+
 #main {
   transition: margin-left 0.3s;
   padding: 16px;
@@ -136,6 +143,10 @@ a {
 footer {
     width: 100%;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 25px;
+}
+mark{
+    background-color: bisque;
+    color:#725b40 ;
 }
