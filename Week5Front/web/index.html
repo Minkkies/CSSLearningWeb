@@ -13,44 +13,63 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 </head>
 
 <body>
-    <div class="sidenav">
-        <a href="#Home">
-            <h3>Home</h3>
-        </a>
+    <div id="mySidebar" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    
+            <a href="#Home">
+                <h3>Home</h3>
+            </a>
 
-        <a href="#Intro">
-            <h3>Introduction</h3>
-        </a>
+            <a href="#Intro">
+                <h3>Introduction</h3>
+            </a>
 
-        <a href="">
-            <h3>Selectors & Style</h3>
-        </a>
-        <a href="">
-            <h3>Text & Font</h3>
-        </a>
-        <a href="">
-            <h3>Background & Box</h3>
-        </a>
-        <a href="">
-            <h3> Borders & Layout</h3>
-        </a>
+            <a href="">
+                <h3>Selectors & Style</h3>
+            </a>
+            <a href="">
+                <h3>Text & Font</h3>
+            </a>
+            <a href="">
+                <h3>Background & Box</h3>
+            </a>
+            <a href="">
+                <h3> Borders & Layout</h3>
+            </a>
 
-        <hr style="width: 100px;">
+            <hr style="width: 100px;">
 
-        <a href="https://github.com/Minkkies/HtmlTutorial1/blob/master/Note/Basic%20Html.md" target="_blank">
-            <h3>
-                Read More: HTML
-            </h3>
-        </a>
-        <a href="https://github.com/Minkkies/CSSTutorial/blob/master/CSSnote.md" target="_blank">
-            <h3>
-                Read More: CSS
-            </h3>
-        </a>
+            <a href="https://github.com/Minkkies/HtmlTutorial1/blob/master/Note/Basic%20Html.md" target="_blank">
+                <h3>
+                    Read More: HTML
+                </h3>
+            </a>
+            <a href="https://github.com/Minkkies/CSSTutorial/blob/master/CSSnote.md" target="_blank">
+                <h3>
+                    Read More: CSS
+                </h3>
+            </a>
 
     </div>
 
+    <div class="content ">
+        <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+    </div>
+    -----------------------------
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+
+    ----------------------------
+
     <div class="content frame">
+
         <dl>
             <dt>
                 <h1 id="Home">What I Have Learn About CSS</h1>
@@ -70,7 +89,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         </dl>
     </div>
 
-
     <div class="content frame">
         <h1 id="Intro">Introduction to CSS</h1>
         <h2>- Inline CSS (การใช้ CSS ภายในแท็ก HTML โดยตรงใน body )</h2>
@@ -89,7 +107,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             <h2>- External CSS (การใช้ไฟล์ CSS ภายนอก ใน head ) </h2>
             <a href="externalCSSDemo.html" target="_blank">Result External</a>
             <div class="code-block">
-            <pre><code>
+                <pre><code>
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
@@ -123,11 +141,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         text. Here is some more text.&lt;/p&gt;
 &lt;/body&gt;
 </code></pre>
-        </div>
+            </div>
 
             <a href="EmbededCSSDemo.html" target="_blank">EmbededCSSDemo</a>
         </div>
     </div>
+
 </body>
 
 </html>
