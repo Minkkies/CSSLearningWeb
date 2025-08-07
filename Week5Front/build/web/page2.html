@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+
+<head>
+    <title>CSS Page2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="main">
+     <div id="mySidebar" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+        <a href="index.html">
+            <h3>Back to CSS Part 1</h3>
+        </a>
+
+        
+
+        <hr style="width: 200px;">
+
+        <a href="https://github.com/Minkkies/HtmlTutorial1/blob/master/Note/Basic%20Html.md" target="_blank">
+            <h3>
+                Read More: HTML
+            </h3>
+        </a>
+        <a href="https://github.com/Minkkies/CSSTutorial/blob/master/CSSnote.md" target="_blank">
+            <h3>
+                Read More: CSS
+            </h3>
+        </a>
+
+        <h3 style="margin-left: 30px;">My favourite Song:</h3>
+        <div class="song">
+            <iframe src="https://www.youtube.com/embed/YQ-qToZUybM?si=6ioZhEtlkcQfY_1W" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+        </div>
+         <div class="content ">
+        <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+    </div>
+    <!------------------JAVASCRIPT------------------------>
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "320px";
+            document.getElementById("main").style.marginLeft = "320px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+
+    <!----------------CSS Part 2--------------------------->
+
+    <div class="content frame">
+
+        <dl>
+            <dt>
+                <h1>What I Have Learn About CSS</h1>
+            </dt>
+
+            <div>
+                <dd>
+                    <p>- CSS stands for Cascading Style Sheets</p>
+                </dd>
+                <dd>
+                    <p>- CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
+                </dd>
+                <dd>
+                    <p>- For meaning of Element you can read more in HTML and CSS link in sidebar</p>
+                </dd>
+            </div>
+        </dl>
+    </div>
+
+
+
+
+</body>
