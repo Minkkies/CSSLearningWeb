@@ -1,25 +1,58 @@
 /* CSS Document */
 
-
-
 /*responsive*/
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
+
+/*Mobile */
+@media screen and (max-width: 500px) {
+    #mySidebar.openbtn {
+        width: 100px;
+        /* เต็มจอบนมือถือ */
     }
 
-    .sidenav a {
-        font-size: 18px;
+    #main.shift {
+        margin-left: 100px;
+        /* ไม่ต้องเลื่อนเนื้อหา */
+    }
+
+
+}
+
+/* tablet */
+@media screen and (max-width: 900px) {
+
+    #mySidebar.open {
+        width: 180px;
+        /* ความกว้างปกติบนคอม */
+    }
+
+    #main.shift {
+        margin-left: 180px;
+    }
+
+}
+
+
+/* laptop */
+@media screen and (max-width: 1500px) {
+
+    #mySidebar.open {
+        width: 320px;
+        /* ความกว้างปกติบนคอม */
+    }
+
+    #main.shift {
+        margin-left: 320px;
     }
 }
+
 
 /*-------------------*/
 
 body {
     background-color: #012459;
-    margin: 0;
+    margin-top: 20px;
     background-image: url(https://wallpapercrafter.com/th800/244388-night-sky-star-and-space-hd.jpg);
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -70,17 +103,17 @@ button {
     position: absolute;
     top: 0;
     right: 25px;
-    font-size: 40px;
     margin-left: 50px;
+
 }
 
 .openbtn {
-    font-size: 20px;
     cursor: pointer;
     background-color: #111;
     color: white;
     padding: 10px 15px;
     border: none;
+    font-size: 20px;
 }
 
 .openbtn:hover {
@@ -96,11 +129,11 @@ button {
     margin-top: 20px;
     margin-right: 10px;
     border-radius: 15px;
-    margin-left: 10px;
+    margin-left: 20px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    
+
 }
 
 a {
@@ -110,15 +143,14 @@ a {
 
 
 a:hover {
-   
+
     color: rgb(250, 42, 42);
-    
+
 }
 
 #main {
-  transition: margin-left 0.3s;
-  padding: 16px;
-  margin-left: 0;
+    transition: margin-left 0.3s;
+    padding: 16px;
 }
 
 .song {
@@ -137,7 +169,7 @@ a:hover {
     color: white;
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 20px;
+
 }
 
 footer {
@@ -146,7 +178,22 @@ footer {
     color: rgb(0, 0, 0);
     font-size: 25px;
 }
-mark{
+
+mark {
     background-color: bisque;
-    color:#725b40 ;
+    color: #725b40;
+}
+
+pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    /* ✅ ให้ห่อบรรทัด */
+    word-wrap: break-word;
+    /* ✅ ตัดคำให้พอดีจอ */
+    max-width: 100%;
+}
+
+code {
+    font-family: monospace;
+    font-size: 16px;
 }
